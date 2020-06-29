@@ -16,11 +16,11 @@ app.use(express.static("public"));
 
 app.use(workoutController);
 
-mongoose.connect("mongodb://localhost/workoutDB", {
-  useNewUrlParser: true,
-  useFindAndModify: false
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutDB", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}!`);
-  });
+});
