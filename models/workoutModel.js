@@ -23,8 +23,7 @@ const WorkoutSchema = new Schema({
         distance: {
             type: Number,
             required: "Distance traveled"
-        },
-        totalDuration: Number
+        }
     }],
 
 });
