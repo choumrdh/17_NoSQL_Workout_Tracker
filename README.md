@@ -1,6 +1,6 @@
 # Project Title: 17_NoSQL_Workout_Tracker :raised_hands:
   - A workout tracker app that the user can view, create and track daily workouts. :bulb: 
-  ![WorkoutTracker](./public/image/screenShot_workoutTracker.png)
+  ![WorkoutTracker](/public/image/ScreenShot_WorkoutTracker.png)
 
   ## Table of Contents:
   - [User Story](#user-story-speech_balloon)
