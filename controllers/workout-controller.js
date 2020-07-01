@@ -19,8 +19,11 @@ router.get("/exercise", (req, res) => {
 // api routes
 router.get("/api/workouts", async (req, res) => {
     try {
-        const data = await db.Workout.find({})
+        let data = await db.Workout.find({})
+
+       
         res.json(data);
+
     } catch (error) {
         console.log(error)
         res.send(error);

@@ -5,14 +5,21 @@ async function initWorkout() {
     document
       .querySelector("a[href='/exercise?']")
       .setAttribute("href", `/exercise?id=${lastWorkout._id}`);
-
+      
+    // const duration =lastWorkout.exercises.duration
+    // console.log("duration",duration);
+    //   const totalDurationSum = duration.reduce(function(a,b){
+    //     return a+b;
+    //   },0);
+    //   console.log(totalDurationSum)
     const workoutSummary = {
+
       date: formatDate(lastWorkout.day),
       totalDuration: lastWorkout.totalDuration,
       numExercises: lastWorkout.exercises.length,
       ...tallyExercises(lastWorkout.exercises)
     };
-
+  console.log("last workout", lastWorkout, "workout summary", workoutSummary)
     renderWorkoutSummary(workoutSummary);
   } else {
     renderNoWorkoutText()
