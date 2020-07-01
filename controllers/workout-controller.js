@@ -21,7 +21,6 @@ router.get("/api/workouts", async (req, res) => {
     try {
         let data = await db.Workout.find({})
 
-       
         res.json(data);
 
     } catch (error) {

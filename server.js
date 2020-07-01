@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const workoutController = require("./controllers/workout-controller")
 const PORT = process.env.PORT || 8080;
 
-// const db = require("./models");
 const app = express();
 
 app.use(logger("dev"));
